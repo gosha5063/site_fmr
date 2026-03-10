@@ -11,14 +11,18 @@
     }
   });
 
-  // Cookie notice
-  var cookieNotice = document.querySelector('.cookie-notice');
-  var cookieAccept = document.querySelector('.cookie-accept');
-  if (cookieAccept && cookieNotice) {
-    if (localStorage.getItem('cookie-accepted')) cookieNotice.classList.add('hidden');
-    cookieAccept.addEventListener('click', function () {
-      localStorage.setItem('cookie-accepted', '1');
-      cookieNotice.classList.add('hidden');
+  // Cookie notice (поддерживаем несколько баннеров на странице)
+  var cookieNotices = Array.prototype.slice.call(document.querySelectorAll('.cookie-notice'));
+  var cookieButtons = Array.prototype.slice.call(document.querySelectorAll('.cookie-accept'));
+  if (cookieNotices.length && cookieButtons.length) {
+    if (localStorage.getItem('cookie-accepted')) {
+      cookieNotices.forEach(function (n) { n.classList.add('hidden'); });
+    }
+    cookieButtons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        localStorage.setItem('cookie-accepted', '1');
+        cookieNotices.forEach(function (n) { n.classList.add('hidden'); });
+      });
     });
   }
 
