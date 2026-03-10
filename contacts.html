@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Контакты — беспилотная складская техника</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container page-grid-2">
+        <div>
+          <div class="page-kicker">Контакты</div>
+          <h1>Связаться по проекту автоматизации техники</h1>
+          <p>
+            Оставьте заявку на демонстрацию, пилот или расчёт. Мы ответим в рабочее время
+            и предложим удобный формат обсуждения задачи.
+          </p>
+        </div>
+        <div class="card card-muted">
+          <h3>Контактные данные</h3>
+          <p><strong>ООО «Акселот-Роботикс»</strong></p>
+          <p>Телефон: +7 (495) 961‑26‑09</p>
+          <p>Email: info@axelot.ru</p>
+          <p>Адрес: 129226, г. Москва, ул. Докукина, дом 16, строение 3, помещение 1/4</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="lead-section" id="request-demo">
+      <div class="container">
+        <div class="lead-form-wrap">
+          <h2>Запросить демонстрацию</h2>
+          <form data-lead="contact-demo">
+            <div class="form-fields">
+              <div class="form-field">
+                <label for="c-demo-name">Имя</label>
+                <input id="c-demo-name" name="name" required>
+              </div>
+              <div class="form-field">
+                <label for="c-demo-company">Компания</label>
+                <input id="c-demo-company" name="company">
+              </div>
+              <div class="form-field">
+                <label for="c-demo-email">Email</label>
+                <input id="c-demo-email" name="email" type="email" required>
+              </div>
+              <div class="form-field">
+                <label for="c-demo-phone">Телефон</label>
+                <input id="c-demo-phone" name="phone">
+              </div>
+              <div class="form-field">
+                <label for="c-demo-equipment">Тип техники</label>
+                <input id="c-demo-equipment" name="equipment">
+              </div>
+              <div class="form-footer">
+                <button type="submit" class="btn btn-primary">Отправить</button>
+                <div class="form-note">
+                  Нажимая на кнопку, вы соглашаетесь с обработкой персональных данных
+                  и получением информации о демонстрации.
+                </div>
+              </div>
+            </div>
+            <div class="form-sent hidden">
+              Спасибо! Мы свяжемся с вами для согласования даты демонстрации.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="lead-section" id="request-pilot">
+      <div class="container">
+        <div class="lead-form-wrap">
+          <h2>Обсудить пилот</h2>
+          <form data-lead="contact-pilot">
+            <div class="form-fields">
+              <div class="form-field">
+                <label for="c-pilot-name">Имя</label>
+                <input id="c-pilot-name" name="name" required>
+              </div>
+              <div class="form-field">
+                <label for="c-pilot-company">Компания</label>
+                <input id="c-pilot-company" name="company">
+              </div>
+              <div class="form-field">
+                <label for="c-pilot-email">Email</label>
+                <input id="c-pilot-email" name="email" type="email" required>
+              </div>
+              <div class="form-field">
+                <label for="c-pilot-phone">Телефон</label>
+                <input id="c-pilot-phone" name="phone">
+              </div>
+              <div class="form-field">
+                <label for="c-pilot-qty">Количество единиц техники</label>
+                <input id="c-pilot-qty" name="qty">
+              </div>
+              <div class="form-field">
+                <label for="c-pilot-task">Что хотите автоматизировать</label>
+                <textarea id="c-pilot-task" name="task" rows="3"></textarea>
+              </div>
+              <div class="form-footer">
+                <button type="submit" class="btn btn-primary">Обсудить пилот</button>
+                <div class="form-note">
+                  Нажимая на кнопку, вы соглашаетесь с обработкой персональных данных.
+                </div>
+              </div>
+            </div>
+            <div class="form-sent hidden">
+              Спасибо! Мы свяжемся с вами, чтобы обсудить параметры пилота.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="lead-section" id="request-calculation">
+      <div class="container">
+        <div class="lead-form-wrap">
+          <h2>Получить расчёт</h2>
+          <form data-lead="contact-calc">
+            <div class="form-fields">
+              <div class="form-field">
+                <label for="c-calc-name">Имя</label>
+                <input id="c-calc-name" name="name" required>
+              </div>
+              <div class="form-field">
+                <label for="c-calc-company">Компания</label>
+                <input id="c-calc-company" name="company">
+              </div>
+              <div class="form-field">
+                <label for="c-calc-email">Email</label>
+                <input id="c-calc-email" name="email" type="email" required>
+              </div>
+              <div class="form-field">
+                <label for="c-calc-phone">Телефон</label>
+                <input id="c-calc-phone" name="phone">
+              </div>
+              <div class="form-field">
+                <label for="c-calc-equipment">Тип техники и количество</label>
+                <textarea id="c-calc-equipment" name="equipment" rows="3"></textarea>
+              </div>
+              <div class="form-field">
+                <label for="c-calc-site">Объект / площадка</label>
+                <input id="c-calc-site" name="site">
+              </div>
+              <div class="form-footer">
+                <button type="submit" class="btn btn-primary">Запросить расчёт</button>
+                <div class="form-note">
+                  Нажимая на кнопку, вы соглашаетесь с обработкой персональных данных
+                  и получением коммерческого предложения.
+                </div>
+              </div>
+            </div>
+            <div class="form-sent hidden">
+              Спасибо! Мы подготовим предварительный расчёт и свяжемся с вами.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="lead-section" id="request-project">
+      <div class="container">
+        <div class="lead-form-wrap">
+          <h2>Запросить автоматизацию парка техники</h2>
+          <form data-lead="contact-fleet">
+            <div class="form-fields">
+              <div class="form-field">
+                <label for="c-fleet-name">Имя</label>
+                <input id="c-fleet-name" name="name" required>
+              </div>
+              <div class="form-field">
+                <label for="c-fleet-company">Компания</label>
+                <input id="c-fleet-company" name="company">
+              </div>
+              <div class="form-field">
+                <label for="c-fleet-email">Email</label>
+                <input id="c-fleet-email" name="email" type="email" required>
+              </div>
+              <div class="form-field">
+                <label for="c-fleet-phone">Телефон</label>
+                <input id="c-fleet-phone" name="phone">
+              </div>
+              <div class="form-field">
+                <label for="c-fleet-qty">Количество единиц техники</label>
+                <input id="c-fleet-qty" name="qty">
+              </div>
+              <div class="form-field">
+                <label for="c-fleet-comment">Комментарий</label>
+                <textarea id="c-fleet-comment" name="comment" rows="3"></textarea>
+              </div>
+              <div class="form-footer">
+                <button type="submit" class="btn btn-primary">Отправить запрос</button>
+                <div class="form-note">
+                  Нажимая на кнопку, вы соглашаетесь с обработкой персональных данных.
+                </div>
+              </div>
+            </div>
+            <div class="form-sent hidden">
+              Спасибо! Мы свяжемся с вами, чтобы обсудить сценарии для парка техники.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-col">
+          <h4>Контакты</h4>
+          <a href="contacts.html#request-demo">Запросить демонстрацию</a>
+          <a href="contacts.html#request-pilot">Обсудить пилот</a>
+          <a href="contacts.html#request-calculation">Получить расчёт</a>
+        </div>
+        <div class="footer-col">
+          <h4>Решение</h4>
+          <a href="solution.html">Решение под ключ</a>
+        </div>
+        <div class="footer-col">
+          <h4>Техника</h4>
+          <a href="product.html">Типы техники</a>
+        </div>
+        <div class="footer-col">
+          <h4>Кейсы</h4>
+          <a href="cases.html">Кейсы и пилоты</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Акселот Беспилотные Решения</span>
+        <span><a href="privacy.html">Политика конфиденциальности</a> · <a href="consent.html">Согласие на обработку персональных данных</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cookie-notice">
+    <p>Мы используем cookie, чтобы сайт работал корректно и помогал обрабатывать заявки.</p>
+    <div class="cookie-notice-actions">
+      <button type="button" class="btn btn-primary cookie-accept">Хорошо</button>
+    </div>
+  </div>
+
+  <script src="js/header.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+

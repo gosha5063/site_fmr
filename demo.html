@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Демо беспилотной складской техники</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="container page-grid-2">
+        <div>
+          <div class="page-kicker">Демо и пилоты</div>
+          <h1>Демонстрация беспилотной техники</h1>
+          <p>
+            Показываем работу беспилотной техники в демо‑формате или на вашей площадке:
+            маршруты, безопасность, переключение режимов и варианты пилота.
+          </p>
+          <div class="page-hero-cta">
+            <a href="#lead-demo" class="btn btn-primary">Заказать демонстрацию</a>
+            <a href="#format" class="btn">Как проходит демо</a>
+          </div>
+        </div>
+        <div class="card card-muted">
+          <h3>Что можно увидеть</h3>
+          <ul>
+            <li>запуск маршрута и остановку по событиям;</li>
+            <li>работу сенсоров и сценарии безопасности;</li>
+            <li>переключение между ручным и автоматическим режимами;</li>
+            <li>типовой цикл пилота и запуска.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="format">
+      <div class="container">
+        <div class="section-title-row">
+          <h2>Форматы демонстрации</h2>
+        </div>
+        <div class="columns-2">
+          <div class="card">
+            <h3>Демо на нашей площадке</h3>
+            <ul>
+              <li>ознакомительный показ возможностей техники;</li>
+              <li>просмотр типовых маршрутов и сценариев;</li>
+              <li>ответы на инженерные и бизнес‑вопросы.</li>
+            </ul>
+          </div>
+          <div class="card card-muted">
+            <h3>Пилот на объекте заказчика</h3>
+            <ul>
+              <li>дооснащение техники и запуск пилота;</li>
+              <li>настройка маршрутов в реальной среде;</li>
+              <li>оценка эффекта и подготовка к масштабированию.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lead-section" id="lead-demo">
+      <div class="container">
+        <div class="lead-form-wrap">
+          <h2>Записаться на демонстрацию</h2>
+          <p>Выберите удобный формат демо и оставьте контакты — согласуем дату и программу показа.</p>
+
+          <form data-lead="demo">
+            <div class="form-fields">
+              <div class="form-field">
+                <label for="demo-name">Имя</label>
+                <input id="demo-name" name="name" required>
+              </div>
+              <div class="form-field">
+                <label for="demo-company">Компания</label>
+                <input id="demo-company" name="company">
+              </div>
+              <div class="form-field">
+                <label for="demo-role">Должность</label>
+                <input id="demo-role" name="role">
+              </div>
+              <div class="form-field">
+                <label for="demo-email">Email</label>
+                <input id="demo-email" name="email" type="email" required>
+              </div>
+              <div class="form-field">
+                <label for="demo-phone">Телефон</label>
+                <input id="demo-phone" name="phone">
+              </div>
+              <div class="form-field">
+                <label for="demo-format">Формат демо</label>
+                <select id="demo-format" name="format">
+                  <option value="site">Демо на вашей площадке</option>
+                  <option value="ours">Демо на нашей площадке</option>
+                  <option value="online">Онлайн‑демо</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="demo-comment">Комментарий</label>
+                <textarea id="demo-comment" name="comment" rows="3"></textarea>
+              </div>
+              <div class="form-footer">
+                <button type="submit" class="btn btn-primary">Записаться</button>
+                <div class="form-note">
+                  Нажимая на кнопку, вы соглашаетесь с обработкой персональных данных
+                  и получением информации о демонстрации.
+                </div>
+              </div>
+            </div>
+            <div class="form-sent hidden">
+              Спасибо! Мы свяжемся с вами для подтверждения даты и формата демонстрации.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-col">
+          <h4>Демо и пилоты</h4>
+          <a href="demo.html">Демонстрация</a>
+          <a href="contacts.html#request-pilot">Пилот на объекте</a>
+        </div>
+        <div class="footer-col">
+          <h4>Решение</h4>
+          <a href="solution.html">Решение под ключ</a>
+        </div>
+        <div class="footer-col">
+          <h4>Кейсы</h4>
+          <a href="cases.html">Кейсы и пилоты</a>
+        </div>
+        <div class="footer-col">
+          <h4>Материалы</h4>
+          <a href="materials.html">Презентации и материалы</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Акселот Беспилотные Решения</span>
+        <span><a href="privacy.html">Политика конфиденциальности</a> · <a href="consent.html">Согласие на обработку персональных данных</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cookie-notice">
+    <p>Мы используем cookie, чтобы предлагать удобное время и формат демонстраций.</p>
+    <div class="cookie-notice-actions">
+      <button type="button" class="btn btn-primary cookie-accept">Хорошо</button>
+    </div>
+  </div>
+
+  <script src="js/header.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+
