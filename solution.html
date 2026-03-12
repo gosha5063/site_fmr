@@ -10,29 +10,30 @@
   <div id="header-placeholder"></div>
 
   <main>
-    <section class="page-hero" id="top">
+    <section class="page-hero solution-hero" id="top">
       <div class="container page-grid-2">
-        <div>
-          <div class="page-kicker">Решение под ключ</div>
-          <h1>Комплект беспилотности для вашей техники</h1>
-          <p>
-            Мы берём на себя всё, что связано с переводом конкретной единицы техники или парка
-            в беспилотный режим, не затрагивая WMS/RMS и ИТ‑контур склада.
-          </p>
-          <div class="page-hero-cta">
-            <a href="#composition" class="btn btn-primary">Что входит в решение</a>
-            <a href="contacts.html#request-project" class="btn">Обсудить проект</a>
+        <div class="solution-hero-main">
+          <div class="solution-hero-text">
+            <div class="page-kicker">Решение под ключ</div>
+            <h1>Бортовой ПАК беспилотности</h1>
+            <p>
+              Мы берём на себя всё, что связано с переводом конкретной единицы техники или парка
+              в беспилотный режим, устанавливаем бортовой компьютер и сенсоры, подключаем к системе управления складом.
+            </p>
+            <div class="page-hero-cta">
+              <a href="#composition" class="btn btn-primary">Что входит в решение</a>
+              <a href="contacts.html#request-project" class="btn">Обсудить проект</a>
+            </div>
           </div>
+          <img src="material/solutions/комплект.png" alt="Комплект: контроллер и сенсоры" class="solution-hero-bg">
         </div>
         <div class="card card-muted">
           <h3>Фокус решения</h3>
-          <ul>
-            <li>конкретная техника и конкретные маршруты;</li>
-            <li>оборудование, контроллеры и сенсоры;</li>
-            <li>логика автономного движения и безопасность;</li>
-            <li>запуск в эксплуатацию;</li>
-            <li>сопровождение и развитие сценариев.</li>
-          </ul>
+          <p class="focus-accent">Безопастность выполнения операций</p>
+          <p class="focus-accent">Безопасность движения по маршрутам</p>
+          <p class="focus-accent">Точная локализация положения робота с помощью SLAM навигации.</p>
+          <p class="focus-accent">Простая интеграция с существующей WMS/RMS/WCS системой от любого интегратора.</p>
+          <p class="focus-accent">Сопровождение и развитие сценариев.</p>
         </div>
       </div>
     </section>
@@ -44,23 +45,29 @@
         </div>
         <div class="columns-2">
           <div class="card">
-            <h3>Инженерная часть</h3>
+            <h3>Программная часть</h3>
             <ul>
-              <li>обследование техники и сценариев работы;</li>
-              <li>подбор комплекта оборудования и контроллеров;</li>
-              <li>установка сенсоров, коммуникаций, вспомогательных модулей;</li>
-              <li>интеграция комплектов в существующую технику.</li>
+              <li>Модуль работы с WMS/RMS/WCS системой</li>
+              <li>Модуль безопасности</li>
+              <li>Модуль планирования и следования маршрутов</li>
+              <li>Модуль осуществления логистических операций</li>
+              <li>ПО для настройки параметров движения и сбора данных от техники</li>
+              <li>Запись карты помещения</li>
             </ul>
           </div>
           <div class="card">
-            <h3>Проектная часть</h3>
+            <h3>Аппаратная часть</h3>
             <ul>
-              <li>проектирование маршрутов и логики движения;</li>
-              <li>настройка режимов работы (ручной / автоматический);</li>
-              <li>испытания и настройка безопасности;</li>
-              <li>поддержка запуска.</li>
+              <li>Дооснащение техники бортовыми компьютером с ПО</li>
+              <li>Лидары для локализации положения робота по технологии SLAM</li>
+              <li>Камеры, лидары, ультразвуковые датчики для обнаружения препятствий</li>
+              <li>Экнодеры для измерения скорости и ускорения</li>
             </ul>
           </div>
+        </div>
+        <p class="section-lead">Фрагмент инженерного ПО, собрана статистика с робота</p>
+        <div class="solution-engineering-img">
+          <img src="material/solutions/инженерное по.png" alt="Интерфейс инженерного ПО для управления роботом">
         </div>
       </div>
     </section>
@@ -69,15 +76,17 @@
       <div class="container">
         <div class="section-title-row">
           <h2>Как это работает</h2>
-          <div class="section-title-meta">
-            Решение строится вокруг контроллера, сенсорного контура и программной логики движения,
-            которая отвечает за безопасное выполнение маршрутов.
-          </div>
         </div>
+        <p class="section-lead">
+          От системы управления складом наш комплекс получает команды на движение и выполнение операций. Планировщик
+          маршрутов строит траектории и выбирает оптимальный путь, модуль безопасности контролирует зону вокруг техники
+          и маршруты, а модуль логистических операций выполняет захват и постановку паллет или коробок по заданному
+          маршруту.
+        </p>
         <div class="columns-3">
           <div class="card">
             <h3>Контроллеры и управление</h3>
-            <p>Центральный контроллер получает команды, управляет приводами и режимами техники.</p>
+            <p>Управление приводами колес идет по станадартным протоколам, часто по CAN</p>
           </div>
           <div class="card">
             <h3>Сенсоры и безопасность</h3>
@@ -96,113 +105,57 @@
         <div class="section-title-row">
           <h2>Этапы проекта</h2>
         </div>
-        <div class="columns-3">
-          <div class="card">
-            <h3>1. Обследование</h3>
-            <p>Фиксируем задачи, маршруты, типы техники и требования к безопасности.</p>
+        <div class="timeline-steps">
+          <div class="timeline-step">
+            <div class="timeline-marker">1</div>
+            <div class="timeline-content">
+              <h3>Расчёт</h3>
+              <p>
+                Выбранный интегратор анализирует ваш склад, фиксирует процессы и типы техники,
+                готовит расчёт по сценариям и экономике.
+              </p>
+            </div>
           </div>
-          <div class="card">
-            <h3>2. Проектирование</h3>
-            <p>Определяем состав комплекта, точки установки и сценарии движения.</p>
+          <div class="timeline-step">
+            <div class="timeline-marker">2</div>
+            <div class="timeline-content">
+              <h3>Подбор роботов</h3>
+              <p>
+                Определяем, какую технику дооснастить и где нужны новые роботы: ставим наши контроллеры
+                на вашу технику или технику партнёров.
+              </p>
+            </div>
           </div>
-          <div class="card">
-            <h3>3. Установка</h3>
-            <p>Монтируем оборудование, подключаем контроллеры и сенсоры.</p>
+          <div class="timeline-step">
+            <div class="timeline-marker">3</div>
+            <div class="timeline-content">
+              <h3>Установка и настройка</h3>
+              <p>
+                Интегратор устанавливает систему управления флотом, заносит маршруты, подключает роботов
+                к WMS/RMS/WCS и настраивает безопасность.
+              </p>
+            </div>
           </div>
-          <div class="card">
-            <h3>4. Настройка и испытания</h3>
-            <p>Настраиваем маршруты, режимы, проверяем сценарии безопасности.</p>
-          </div>
-          <div class="card">
-            <h3>5. Запуск и сопровождение</h3>
-            <p>Переводим решение в эксплуатацию, сопровождаем парк и обновления.</p>
-          </div>
+          <div class="timeline-step">
+            <div class="timeline-marker">4</div>
+            <div class="timeline-content">
+              <h3>Ввод в эксплуатацию</h3>
+              <p>
+                Решение переводится в рабочий режим, сопровождается и масштабируется на дополнительные участки.
+              </p>
+            </div>
+я          </div>
         </div>
       </div>
     </section>
 
-    <section id="out-of-scope">
-      <div class="container">
-        <div class="section-title-row">
-          <h2>Что не входит в проект</h2>
-          <div class="section-title-meta">
-            Важно зафиксировать границы ответственности, чтобы сайт не создавал ложного ожидания
-            по комплексной автоматизации склада.
-          </div>
-        </div>
-        <div class="columns-2">
-          <div class="card">
-            <h3>Мы не делаем</h3>
-            <ul>
-              <li>внедрение или разработку WMS/RMS;</li>
-              <li>общую ИТ‑архитектуру склада;</li>
-              <li>оркестрацию всего потока склада;</li>
-              <li>роль генерального подрядчика по автоматизации объекта.</li>
-            </ul>
-          </div>
-          <div class="card card-muted">
-            <h3>Наш фокус</h3>
-            <ul>
-              <li>конкретная единица техники или парк;</li>
-              <li>комплект беспилотности и безопасность;</li>
-              <li>ввод в эксплуатацию и сопровождение.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <section class="lead-section" id="lead-solution">
       <div class="container">
         <div class="lead-form-wrap">
           <h2>Обсудить решение под ключ</h2>
-          <p>Оставьте контакты и кратко опишите задачу — подготовим предложение по составу комплекта.</p>
-
-          <form data-lead="solution">
-            <div class="form-fields">
-              <div class="form-field">
-                <label for="solution-name">Имя</label>
-                <input id="solution-name" name="name" required>
-              </div>
-              <div class="form-field">
-                <label for="solution-company">Компания</label>
-                <input id="solution-company" name="company">
-              </div>
-              <div class="form-field">
-                <label for="solution-role">Должность</label>
-                <input id="solution-role" name="role">
-              </div>
-              <div class="form-field">
-                <label for="solution-email">Email</label>
-                <input id="solution-email" name="email" type="email" required>
-              </div>
-              <div class="form-field">
-                <label for="solution-phone">Телефон</label>
-                <input id="solution-phone" name="phone">
-              </div>
-              <div class="form-field">
-                <label for="solution-equipment">Тип техники и количество</label>
-                <input id="solution-equipment" name="equipment">
-              </div>
-              <div class="form-field">
-                <label for="solution-site">Объект / площадка</label>
-                <input id="solution-site" name="site">
-              </div>
-              <div class="form-field">
-                <label for="solution-task">Задача</label>
-                <textarea id="solution-task" name="task" rows="3"></textarea>
-              </div>
-              <div class="form-footer">
-                <button type="submit" class="btn btn-primary">Отправить параметры</button>
-                <div class="form-note">
-                  Нажимая на кнопку, вы подтверждаете согласие на обработку персональных данных и получение информации.
-                </div>
-              </div>
-            </div>
-            <div class="form-sent hidden">
-              Спасибо! Мы свяжемся с вами и обсудим параметры проекта.
-            </div>
-          </form>
+          <p>Свяжитесь с нами или оставьте заявку на расчёт — подготовим предложение под вашу задачу.</p>
+          <p><a href="contacts.html#lead-main" class="btn btn-primary">Связаться с нами</a> <a href="index.html#request-calc" class="btn btn-ghost">Получить расчёт</a></p>
         </div>
       </div>
     </section>
