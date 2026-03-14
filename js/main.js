@@ -26,15 +26,43 @@
     });
   }
 
-  // Form submit (demo — без бэкенда показываем сообщение)
+  // Form submit: отправляем лида на бэкенд и показываем сообщение
   var forms = document.querySelectorAll('form[data-lead]');
   forms.forEach(function (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+
+      var payload = {};
+      var formId = form.getAttribute('data-lead') || 'unknown';
+
+      Array.prototype.forEach.call(
+        form.querySelectorAll('input, textarea, select'),
+        function (field) {
+          if (!field.name) return;
+          payload[field.name] = field.value;
+        }
+      );
+
+      var body = {
+        id: Date.now(),
+        source: formId,
+        data: payload
+      };
+
+      // отправляем данные на бэкенд (нужен /api/leads на сервере)
+      fetch('/api/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body)
+      }).catch(function () {
+        // при ошибке сети просто продолжаем, чтобы не ломать UX
+      });
+
       var sent = form.querySelector('.form-sent');
-      if (sent) {
+      var fields = form.querySelector('.form-fields');
+      if (sent && fields) {
         sent.classList.remove('hidden');
-        form.querySelector('.form-fields')?.classList.add('hidden');
+        fields.classList.add('hidden');
       }
     });
   });
