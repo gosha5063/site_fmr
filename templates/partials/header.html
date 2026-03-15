@@ -1,0 +1,69 @@
+{% load static %}
+<div class="header-sticky-wrapper">
+<div class="top-bar">
+  <div class="container top-bar-inner">
+    <div class="top-bar-left">
+      <span class="top-bar-link">Акселот Беспилотные Решения</span>
+    </div>
+    <div class="top-bar-right">
+      <a href="tel:+74959612609" class="top-bar-link">Связаться с нами: +7 (495) 961‑26‑09</a>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="{% url 'index' %}" class="header-logo">
+      <img src="{% static 'material/logo/logo.png' %}" alt="Акселот Беспилотные Решения">
+    </a>
+
+    <div class="header-nav-wrap">
+      <nav class="nav-main nav-row1">
+        <li><a href="{% url 'index' %}">Главная</a></li>
+        <li><a href="{% url 'solution' %}">Решение </a></li>
+        <li>
+          <a href="{% url 'product' %}">Техника</a>
+          <div class="mega-menu">
+            <div class="mega-title">Техника</div>
+            <a href="{% url 'product' %}#customer-fleet">Техника заказчика</a>
+            <a href="{% url 'product' %}#forklifts">Вилочные погрузчики</a>
+            <a href="{% url 'product' %}#reachtrucks">Ричтраки</a>
+            <a href="{% url 'product' %}#stackers">Штабелёры</a>
+            <a href="{% url 'product' %}#pallet-trucks">AGV тележки</a>
+          </div>
+        </li>
+
+        <li><a href="{% url 'blog' %}">Блог</a></li>
+        <li><a href="{% url 'about' %}">О компании</a></li>
+      </nav>
+      <nav class="nav-main nav-row2">
+        <li><a href="{% url 'demo' %}">Демо-Склад</a></li>
+        <li><a href="{% url 'faq' %}">Частые Вопросы</a></li>
+        <li><a href="{% url 'partners' %}">Партнёрам</a></li>
+        <li><a href="{% url 'contacts' %}">Контакты</a></li>
+      </nav>
+    </div>
+
+    <div class="header-right">
+      <a href="{% url 'contacts' %}#lead-main" class="btn btn-ghost header-cta-btn">Связаться</a>
+      <a href="{% url 'index' %}#request-calc" class="btn btn-primary header-cta-btn">Запросить расчёт</a>
+      <button class="menu-toggle" type="button" aria-label="Меню">☰</button>
+    </div>
+  </div>
+
+  <nav class="nav-mobile">
+    <a href="{% url 'index' %}">Главная</a>
+    <a href="{% url 'solution' %}">Решение под ключ</a>
+    <a href="{% url 'product' %}">Какая техника автоматизируется</a>
+    <a href="{% url 'scenarios' %}">Сценарии применения</a>
+    <a href="{% url 'cases' %}">Кейсы</a>
+    <a href="{% url 'demo' %}">Демо</a>
+    <a href="{% url 'blog' %}">Блог / Экспертиза</a>
+    <a href="{% url 'partners' %}">Партнёрам</a>
+    <a href="{% url 'materials' %}">Материалы</a>
+    <a href="{% url 'faq' %}">FAQ</a>
+    <a href="{% url 'about' %}">О компании</a>
+    <a href="{% url 'contacts' %}">Контакты</a>
+  </nav>
+</header>
+</div>

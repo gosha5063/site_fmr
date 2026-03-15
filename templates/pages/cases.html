@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block title %}Кейсы — беспилотная складская техника{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div class="container">
+    <div class="page-kicker">Кейсы</div>
+    <h1>Практические проекты по автоматизации техники</h1>
+    <p>
+      Здесь собраны кейсы внедрений: от одной единицы техники до автоматизации парка
+      на складе или производстве.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-title-row">
+      <h2>Проекты</h2>
+      <div class="section-title-meta">
+        Краткие описания проектов: от одной единицы техники до участка склада или производства.
+      </div>
+    </div>
+    <div class="item-grid">
+      <article class="item-card">
+        <h3>Автоматизация погрузчика на приёмке</h3>
+        <p>Автоматизация маршрута между воротами и буферной зоной.</p>
+        <div class="item-card-meta">Тип клиента: распределительный центр. Техника: вилочный погрузчик.</div>
+        <p><a href="{% url 'case-pogruzchik-priemka' %}" class="btn btn-ghost">Читать кейс</a></p>
+      </article>
+      <article class="item-card">
+        <h3>Внутрипроизводственная логистика</h3>
+        <p>Беспилотная перевозка палет между цехами и буферами хранения.</p>
+        <div class="item-card-meta">Тип клиента: производственное предприятие. Техника: паллетоперевозчики.</div>
+        <p><a href="{% url 'case-vnutripromyshlennaya-logistika' %}" class="btn btn-ghost">Читать кейс</a></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-title-row">
+      <h2>Внедрения</h2>
+      <div class="section-title-meta">
+        Полноценные проекты, где решение переведено в эксплуатацию и используется
+        в ежедневной работе.
+      </div>
+    </div>
+    <div class="item-grid">
+      <article class="item-card">
+        <h3>Автоматизация одной единицы техники</h3>
+        <p>Дооснащение погрузчика с запуском на постоянной основе.</p>
+        <div class="item-card-meta">Склад, логистический оператор.</div>
+        <p><a href="{% url 'case-odna-edinica-tehniki' %}" class="btn btn-ghost">Читать кейс</a></p>
+      </article>
+      <article class="item-card">
+        <h3>Автоматизация парка техники</h3>
+        <p>Масштабирование решения с одной машины на парк и несколько участков склада.</p>
+        <div class="item-card-meta">Склад + производство.</div>
+        <p><a href="{% url 'case-park-tehniki' %}" class="btn btn-ghost">Читать кейс</a></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="lead-section">
+  <div class="container">
+    <div class="lead-form-wrap">
+      <h2>Получить примеры кейсов и расчёт</h2>
+      <p>Свяжитесь с нами или оставьте заявку на расчёт — подберём релевантные кейсы.</p>
+      <p><a href="{% url 'contacts' %}#lead-main" class="btn btn-primary">Связаться с нами</a> <a href="{% url 'index' %}#request-calc" class="btn btn-ghost">Получить расчёт</a></p>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% block title %}Блог и экспертиза — беспилотная складская техника{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div class="container">
+    <div class="page-kicker">Блог / Экспертиза</div>
+    <h1>Экспертиза по автоматизации складской техники</h1>
+    <p>
+      В этом разделе будут статьи о беспилотной складской технике, экономике автоматизации,
+      безопасности и сценариях применения.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-title-row">
+      <h2>Категории материалов</h2>
+    </div>
+    <div class="pill-row blog-categories" role="navigation" aria-label="Фильтр по категориям">
+      <a href="#all" class="pill blog-cat-link" data-category="all">Все</a>
+      <a href="#cat-axelot" class="pill blog-cat-link" data-category="axelot">Акселот Беспилотные Решения</a>
+      <a href="#cat-forklifts" class="pill blog-cat-link" data-category="forklifts">Автоматизация погрузчиков</a>
+      <a href="#cat-reachtrucks" class="pill blog-cat-link" data-category="reachtrucks">Автоматизация ричтраков</a>
+      <a href="#cat-economy" class="pill blog-cat-link" data-category="economy">Экономика автоматизации</a>
+      <a href="#cat-safety" class="pill blog-cat-link" data-category="safety">Безопасность</a>
+      <a href="#cat-cases" class="pill blog-cat-link" data-category="cases">Кейсы</a>
+    </div>
+
+    <div class="item-grid" id="blog-posts">
+      <article class="item-card blog-post" data-category="axelot">
+        <h3>Акселот: подход к беспилотной складской технике</h3>
+        <p>Как мы переводим погрузчики и другую технику в беспилотный режим и с кем работаем.</p>
+        <div class="item-card-meta">Акселот Беспилотные Решения</div>
+      </article>
+      <article class="item-card blog-post" data-category="forklifts">
+        <h3>Когда стоит автоматизировать погрузчики</h3>
+        <p>Признаки готовности склада, ограничения и первые шаги к беспилотному режиму.</p>
+        <div class="item-card-meta">Автоматизация погрузчиков</div>
+      </article>
+      <article class="item-card blog-post" data-category="reachtrucks">
+        <h3>Автоматизация ричтраков: особенности и сценарии</h3>
+        <p>Работа в стеллажных зонах, безопасность на высоте и интеграция с WMS.</p>
+        <div class="item-card-meta">Автоматизация ричтраков</div>
+      </article>
+      <article class="item-card blog-post" data-category="economy">
+        <h3>Экономика автоматизации склада</h3>
+        <p>Окупаемость, сокращение затрат на водителей и расчёт эффекта под ваш склад.</p>
+        <div class="item-card-meta">Экономика автоматизации</div>
+      </article>
+      <article class="item-card blog-post" data-category="safety">
+        <h3>Безопасность беспилотной техники на складе</h3>
+        <p>Сенсоры, сценарии остановки и работа с персоналом в зоне движения роботов.</p>
+        <div class="item-card-meta">Безопасность</div>
+      </article>
+      <article class="item-card blog-post" data-category="cases">
+        <h3>Кейсы внедрений: от одной единицы до парка</h3>
+        <p>Реальные проекты по дооснащению техники и масштабированию на участки склада.</p>
+        <div class="item-card-meta">Кейсы</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="lead-section">
+  <div class="container">
+    <div class="lead-form-wrap">
+      <h2>Связаться и получить расчёт</h2>
+      <p>Оставьте заявку на расчёт или свяжитесь с нами — пришлём материалы по беспилотной технике.</p>
+      <p><a href="{% url 'contacts' %}#lead-main" class="btn btn-primary">Связаться с нами</a> <a href="{% url 'index' %}#request-calc" class="btn btn-ghost">Получить расчёт</a></p>
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block extra_js %}
+<script>
+  (function () {
+    var posts = document.querySelectorAll('.blog-post');
+    var links = document.querySelectorAll('.blog-cat-link');
+
+    function getCategoryFromHash() {
+      var hash = (window.location.hash || '').replace('#', '');
+      if (hash === 'all' || hash === '') return 'all';
+      if (hash.indexOf('cat-') === 0) return hash.replace('cat-', '');
+      return 'all';
+    }
+
+    function filterPosts(category) {
+      links.forEach(function (link) {
+        link.classList.toggle('active', link.getAttribute('data-category') === category);
+      });
+      posts.forEach(function (post) {
+        var postCat = post.getAttribute('data-category');
+        post.style.display = (category === 'all' || postCat === category) ? '' : 'none';
+      });
+    }
+
+    function onHashChange() {
+      filterPosts(getCategoryFromHash());
+    }
+
+    window.addEventListener('hashchange', onHashChange);
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', onHashChange);
+    } else {
+      onHashChange();
+    }
+  })();
+</script>
+{% endblock %}

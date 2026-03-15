@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Демо беспилотной складской техники{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div class="container page-grid-2">
+    <div>
+      <div class="page-kicker">Демо</div>
+      <h1>Демонстрация беспилотной техники</h1>
+      <p>
+        Показываем работу беспилотной техники в демо‑формате на нашей площадке.
+      </p>
+      <div class="page-hero-cta">
+        <a href="#lead-demo" class="btn btn-primary">Заказать демонстрацию</a>
+        <a href="#format" class="btn">Как проходит демо</a>
+      </div>
+    </div>
+    <div class="card card-muted">
+      <h3>Что можно увидеть</h3>
+      <p class="focus-accent">Работу погрузчиков с нашим бортовым компьютером</p>
+      <p class="focus-accent">Взаимодействие погрузчиков разных вендоров совместно</p>
+      <p class="focus-accent">Взаимодействие с WMS/RMS системой и быструю перестройку сценариев</p>
+      <p class="focus-accent">Основные складские операции, исполняемых беспилотной техникой</p>
+    </div>
+  </div>
+</section>
+
+<section id="format">
+  <div class="container">
+    <div class="section-title-row">
+      <h2>Форматы демонстрации</h2>
+    </div>
+    <div class="product-image-text-row">
+      <div class="section-image section-image--left">
+        <img src="{% static 'material/demo/склад.png' %}" alt="Демо-площадка, склад">
+      </div>
+      <div class="card card-muted">
+        <h3>Демо на нашей площадке</h3>
+        <p class="focus-accent">Возможность самостоятельно задать сценарий для робота</p>
+        <p class="focus-accent">Ознакомительный показ возможностей техники</p>
+        <p class="focus-accent">Просмотр типовых маршрутов и сценариев</p>
+        <p class="focus-accent">Ответы на инженерные и бизнес‑вопросы</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="lead-section" id="lead-demo">
+  <div class="container">
+    <div class="lead-form-wrap">
+      <h2>Записаться на демонстрацию</h2>
+      <p>Заполните заявку на демо-склад на странице контактов — мы согласуем дату и программу показа.</p>
+      <p><a href="{% url 'contacts' %}#request-demo" class="btn btn-primary">Записаться на демо-склад</a></p>
+    </div>
+  </div>
+</section>
+{% endblock %}

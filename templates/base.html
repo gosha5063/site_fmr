@@ -1,0 +1,30 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}Роботизация складской техники под ключ{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="csrf-token" content="{{ csrf_token }}">
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+  {% include 'partials/header.html' %}
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  {% include 'partials/footer.html' %}
+
+  <div class="cookie-notice">
+    <p>Мы используем cookie, чтобы сайт работал корректно и было удобнее планировать проекты по автоматизации техники.</p>
+    <div class="cookie-notice-actions">
+      <button type="button" class="btn btn-primary cookie-accept">Хорошо</button>
+    </div>
+  </div>
+
+  <script src="{% static 'js/main.js' %}"></script>
+  {% block extra_js %}{% endblock %}
+</body>
+</html>

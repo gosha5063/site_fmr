@@ -1,0 +1,158 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Какая техника автоматизируется — беспилотные решения{% endblock %}
+{% block content %}
+<section class="page-hero page-hero--compact">
+  <div class="container">
+    <div class="page-kicker">Техника</div>
+    <h1>Какая техника автоматизируется</h1>
+    <p>
+      Дооснащаем вилочные погрузчики, ричтраки, штабелёры, паллетоперевозчики и технику заказчика
+      комплектом беспилотности. Старт с одной единицы, далее — масштабирование на парк.
+    </p>
+  </div>
+</section>
+
+<section id="customer-fleet">
+  <div class="container">
+    <div class="section-title-row">
+      <h2>Техника заказчика</h2>
+    </div>
+    <div class="product-image-text-row">
+      <div class="section-image section-image--left">
+        <img src="{% static 'material/product/retrofit.png' %}" alt="Техника заказчика в демонстрационном зале">
+      </div>
+      <div class="product-image-text-content">
+        <p>
+          Мы можем дооснастить уже работающую технику при технической совместимости и
+          состоянии оборудования. Это снижает порог входа и позволяет начать без
+          закупки новой техники.
+          Мы постоянно увеличиваем модельный ряд известной нам техники.
+        </p>
+      </div>
+    </div>
+    <div class="card card-muted">
+      <h3>Автоматизация парка</h3>
+      <p class="focus-accent">старт с 1–2 единиц техники;</p>
+      <p class="focus-accent">поэтапное подключение новых машин и маршрутов;</p>
+      <p class="focus-accent">масштабирование на несколько площадок.</p>
+    </div>
+  </div>
+</section>
+
+<section id="forklifts">
+  <div class="container">
+    <div class="section-title-row">
+      <h2>Вилочные погрузчики</h2>
+    </div>
+    <div class="product-image-text-row product-image-text-row--right">
+      <div class="section-image section-image--left">
+        <img src="{% static 'material/product/fmr.png' %}" alt="Беспилотные вилочные погрузчики и паллетоперевозчики">
+      </div>
+      <div class="product-image-text-content">
+        <p>
+          Беспилотные вилочные погрузчики подходят для перемещения палет в зонах приёмки,
+          отгрузки и буферного хранения. Основной эффект — повторяемость маршрутов и снижение
+          зависимости от водителей.
+        </p>
+        <ul>
+          <li>типовые маршруты «рампа — буфер» и обратно;</li>
+          <li>работа в цикле с конвейерами и воротами;</li>
+          <li>перемещение палет между зонами склада.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card card-muted">
+      <h3>Для каких задач</h3>
+      <p class="focus-accent">массовые повторяемые перемещения палет;</p>
+      <p class="focus-accent">снижение простоев техники;</p>
+      <p class="focus-accent">стабильная производительность смены.</p>
+    </div>
+  </div>
+</section>
+
+<section id="reachtrucks">
+  <div class="container">
+    <div class="section-title-row">
+      <h2>Высотные Ричтраки</h2>
+    </div>
+    <div class="product-image-text-row">
+      <div class="section-image section-image--left">
+        <img src="{% static 'material/product/высотные ричтраки.png' %}" alt="Высотные ричтраки">
+      </div>
+      <div class="product-image-text-content">
+        <p>
+          Автоматизация ричтраков актуальна для стеллажных зон и работы на высоте, где
+          важно сочетание точности позиционирования и безопасности.
+        </p>
+      </div>
+    </div>
+    <div class="card card-muted">
+      <h3>Особенности дооснащения</h3>
+      <p class="focus-accent">учёт габаритов и динамики на высоте;</p>
+      <p class="focus-accent">настройка ограничений по коридорам и высоте подъёма;</p>
+      <p class="focus-accent">дополнительные сценарии безопасности.</p>
+    </div>
+  </div>
+</section>
+
+<section id="stackers">
+  <div class="container">
+    <div class="section-title-row">
+      <h2>Штабелёры</h2>
+    </div>
+    <div class="product-image-text-row product-image-text-row--right">
+      <div class="section-image section-image--left">
+        <img src="{% static 'material/product/штабелеры.png' %}" alt="Штабелёры">
+      </div>
+      <div class="product-image-text-content">
+        <p>
+          Штабелёры используются для работы в зонах отбора и локального хранения, где
+          особенно ценна автоматизация повторяющихся коротких маршрутов.
+        </p>
+      </div>
+    </div>
+    <div class="card card-muted">
+      <h3>Задачи автоматизации</h3>
+      <p class="focus-accent">обслуживание стеллажей в зоне отбора;</p>
+      <p class="focus-accent">циклические маршруты между буферами;</p>
+      <p class="focus-accent">подвоз / вывоз палет к зонам комплектации.</p>
+    </div>
+  </div>
+</section>
+
+<section id="pallet-trucks">
+  <div class="container">
+    <div class="section-title-row">
+      <h2>AGV тележки</h2>
+    </div>
+    <div class="product-image-text-row">
+      <div class="section-image section-image--left">
+        <img src="{% static 'material/product/agv.png' %}" alt="AGV тележки">
+      </div>
+      <div class="product-image-text-content">
+        <p>
+          Паллетоперевозчики и AGV тележки — основной инструмент внутрипроизводственной логистики: подвоз
+          к линиям, перемещение между цехами, вывоз готовой продукции.
+        </p>
+      </div>
+    </div>
+    <div class="card card-muted">
+      <h3>Где особенно эффективны</h3>
+      <p class="focus-accent">повторяемые участки маршрутов между зонами;</p>
+      <p class="focus-accent">круговые маршруты по цеху;</p>
+      <p class="focus-accent">обслуживание линий и конвейеров.</p>
+    </div>
+  </div>
+</section>
+
+<section class="lead-section">
+  <div class="container">
+    <div class="lead-form-wrap">
+      <h2>Обсудить технику и получить расчёт</h2>
+      <p>Свяжитесь с нами или оставьте заявку на расчёт под ваш склад.</p>
+      <p><a href="{% url 'contacts' %}#lead-main" class="btn btn-primary">Связаться с нами</a> <a href="{% url 'index' %}#request-calc" class="btn btn-ghost">Получить расчёт</a></p>
+    </div>
+  </div>
+</section>
+{% endblock %}

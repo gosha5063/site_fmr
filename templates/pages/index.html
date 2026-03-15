@@ -1,0 +1,277 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Роботизация складской техники под ключ{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div class="container page-grid-2">
+    <div>
+      <div class="page-kicker">Роботизация складской техники</div>
+      <h1>Роботизируем складскую технику под ключ</h1>
+      <p>
+        Переводим погрузчики, ричтраки, паллетоперевозчики и другую технику в
+        беспилотный режим работы.<br>
+        Станадартный протокол и поддержка интеграторов позволит быстро
+        подключить роботов к вашей WMS/RMS.
+      </p>
+      <div class="page-hero-cta">
+        <a href="{% url 'contacts' %}#lead-main" class="btn btn-primary">Связаться</a>
+        <a href="#request-calc" class="btn btn-ghost">Запросить расчёт</a>
+      </div>
+      <div class="hero-metrics-row">
+        <div class="hero-metric">
+          <div class="accent-number">1&nbsp;ед.</div>
+          <span>от одной единицы техники</span>
+        </div>
+        <div class="hero-metric">
+          <div class="accent-number">Парк</div>
+          <span>масштабирование на несколько машин и площадок</span>
+        </div>
+        <div class="hero-metric">
+          <div class="accent-number">24/7</div>
+          <span>режим работы техники</span>
+        </div>
+        <div class="hero-metric">
+          <div class="accent-number">VDA5050</div>
+          <span>Поддержка всеми интеграторами RMS</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="hero-side-card">
+        <div class="hero-side-card-header">Если вы:</div>
+        <ul class="hero-side-list audience-in-card">
+          <li>Столкнулись с нехваткой кадров и ростом нагрузки на водителей техники</li>
+          <li>Не хотите менять процессы и перестраивать склад под роботизацию</li>
+          <li>Испытываете сложности с поддержкой зарубежных систем и оборудования</li>
+          <li>Хотите точных и предсказуемых результатов работы склада</li>
+          <li>Хотите сделать свой парк техники беспитоным</li>
+          <li>Испытываете сложности с внедрением мультивендорных роботов</li>
+          <br>
+          <div class="hero-side-card-header">Тогда наше решение для вас</div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-title-row">
+      <h2>Для кого это решение</h2>
+    </div>
+    <ul class="audience-list">
+      <li>Столкнулись с нехваткой кадров и ростом нагрузки на водителей техники?</li>
+      <li>Не хотите перестраивать склад под роботизацию?</li>
+      <li>Испытываете сложности с поддержкой зарубежных систем и оборудования?</li>
+    </ul>
+  </div>
+</section>
+
+<section class="equipment-section">
+  <div class="container">
+    <div class="section-title-row">
+      <h2>С какой техникой работаем</h2>
+      <div class="section-title-meta">
+        Дооснащаем технику заказчика или поставляем технику партнёров уже с установленным
+        комплектом беспилотности.
+      </div>
+    </div>
+    <div class="item-grid item-grid--equipment">
+      <a href="{% url 'product' %}#customer-fleet" class="item-card-link">
+        <article class="item-card item-card--ax">
+          <h3>Техника заказчика</h3>
+          <p>Дооснащаем уже работающий парк при технической совместимости.</p>
+          <div class="item-card-meta">Фокус: снижение барьеров входа в роботизацию.</div>
+        </article>
+      </a>
+      <a href="{% url 'product' %}#forklifts" class="item-card-link">
+        <article class="item-card item-card--ax">
+          <h3>Вилочные погрузчики</h3>
+          <p>Перемещение палет и работы на типовых маршрутах внутри склада.</p>
+          <div class="item-card-meta">Фокус: повторяемые операции, маршруты «точка‑точка».</div>
+        </article>
+      </a>
+      <a href="{% url 'product' %}#reachtrucks" class="item-card-link">
+        <article class="item-card item-card--ax">
+          <h3>Ричтраки</h3>
+          <p>Работа в стеллажных зонах и на высоте с контролем безопасности движения.</p>
+          <div class="item-card-meta">Фокус: многопроходные операции и узкие коридоры.</div>
+        </article>
+      </a>
+      <a href="{% url 'product' %}#stackers" class="item-card-link">
+        <article class="item-card">
+          <h3>Штабелёры</h3>
+          <p>Обслуживание зон хранения, подвоз и отбор палет в повторяемых циклах.</p>
+          <div class="item-card-meta">Фокус: циклические маршруты в зонах отбора.</div>
+        </article>
+      </a>
+      <a href="{% url 'product' %}#pallet-trucks" class="item-card-link">
+        <article class="item-card">
+          <h3>AGV тележки</h3>
+          <p>Маршруты между зонами, подвоз к линиям и конвейерам.</p>
+          <div class="item-card-meta">Фокус: внутрипроизводственная логистика.</div>
+        </article>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="rms-support">
+  <div class="container">
+    <div class="section-title-row">
+      <h2>Какие RMS поддерживают наше решение</h2>
+      <div class="section-title-meta">
+        Решение строится на стандарте VDA5050, поэтому роботов можно подключить к любой системе управления складом или флотом, которая поддерживает этот протокол.
+      </div>
+    </div>
+    <div class="rms-support-content">
+      <p class="section-lead">
+        Интегратор подключает нашу технику к вашей WMS/RMS/WCS —
+        мы поставляем комплект беспилотности и
+        поддерживаем интеграцию на стороне робота.
+        Работаем с любыми системами управления складом или флотом, которая поддерживает стандарт VDA5050.
+      </p>
+      <div class="pill-row rms-pills">
+        <span class="pill pill-strong">VDA5050</span>
+        <span class="pill">Системы с поддержкой VDA5050</span>
+        <span class="pill">WMS / RMS / WCS</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-title-row">
+      <h2>Результаты внедрения</h2>
+    </div>
+    <div class="facts-grid">
+      <div class="fact-item">
+        <div class="accent-number">12–24&nbsp;мес</div>
+        <div class="fact-label">Ориентировочный срок окупаемости проекта</div>
+      </div>
+      <div class="fact-item">
+        <div class="accent-number">2–3</div>
+        <div class="fact-label">Водителей заменяет одна единица техники</div>
+      </div>
+      <div class="fact-item">
+        <div class="accent-number">↓20%</div>
+        <div class="fact-label">Минимизация аварий и инцидентов</div>
+      </div>
+      <div class="fact-item">
+        <div class="accent-number">↓30%</div>
+        <div class="fact-label">Снижение ошибок при перемещении грузов</div>
+      </div>
+    </div>
+    <p class="section-cta">
+      <a href="#request-calc" class="btn btn-primary">Получить расчёт под ваш склад</a>
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-title-row">
+      <h2>Как проходит проект</h2>
+    </div>
+    <div class="timeline-steps">
+      <div class="timeline-step">
+        <div class="timeline-marker">1</div>
+        <div class="timeline-content">
+          <h3>Расчёт</h3>
+          <p>
+            Выбранный интегратор анализирует ваш склад, фиксирует процессы и типы техники,
+            готовит расчёт по сценариям и экономике.
+          </p>
+        </div>
+      </div>
+      <div class="timeline-step">
+        <div class="timeline-marker">2</div>
+        <div class="timeline-content">
+          <h3>Подбор роботов</h3>
+          <p>
+            Определяем, какую технику дооснастить и где нужны новые роботы: ставим наши контроллеры
+            на вашу технику или на новую технику партнеров.
+          </p>
+        </div>
+      </div>
+      <div class="timeline-step">
+        <div class="timeline-marker">3</div>
+        <div class="timeline-content">
+          <h3>Установка и настройка</h3>
+          <p>
+            Интегратор устанавливает систему управления флотом, заносит маршруты, подключает роботов
+            к WMS/RMS/WCS.
+          </p>
+        </div>
+      </div>
+      <div class="timeline-step">
+        <div class="timeline-marker">4</div>
+        <div class="timeline-content">
+          <h3>Ввод в эксплуатацию</h3>
+          <p>
+            Решение переводится в рабочий режим, сопровождается и масштабируется на дополнительные участки.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="lead-section" id="request-calc">
+  <div class="container">
+    <div class="lead-form-wrap">
+      <h2>Получить расчёт под ваш склад</h2>
+      <p>Опишите склад и задачу — подготовим ориентировочный расчёт под ваши условия.</p>
+
+      <form data-lead="main">
+        {% csrf_token %}
+        <div class="form-fields">
+          <div class="form-field">
+            <label for="lead-name">Имя</label>
+            <input id="lead-name" name="name" required>
+          </div>
+          <div class="form-field">
+            <label for="lead-company">Компания</label>
+            <input id="lead-company" name="company">
+          </div>
+          <div class="form-field">
+            <label for="lead-role">Должность</label>
+            <input id="lead-role" name="role">
+          </div>
+          <div class="form-field">
+            <label for="lead-phone">Телефон</label>
+            <input id="lead-phone" name="phone">
+          </div>
+          <div class="form-field">
+            <label for="lead-email">Email</label>
+            <input id="lead-email" name="email" type="email" required>
+          </div>
+          <div class="form-field">
+            <label for="lead-equipment">Тип техники</label>
+            <input id="lead-equipment" name="equipment" placeholder="Погрузчики, ричтраки, паллетоперевозчики…">
+          </div>
+          <div class="form-field">
+            <label for="lead-qty">Количество единиц техники</label>
+            <input id="lead-qty" name="qty">
+          </div>
+          <div class="form-field">
+            <label for="lead-task">Задача</label>
+            <textarea id="lead-task" name="task" rows="3" placeholder="Что нужно автоматизировать, какие маршруты и операции."></textarea>
+          </div>
+          <div class="form-footer">
+            <button type="submit" class="btn btn-primary">Получить расчёт</button>
+            <div class="form-note">
+              Нажимая на кнопку, вы соглашаетесь с обработкой персональных данных и
+              получением информационных материалов.
+            </div>
+          </div>
+        </div>
+        <div class="form-sent hidden">
+          Заявка отправлена. Мы подготовим расчёт и свяжемся с вами.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock %}

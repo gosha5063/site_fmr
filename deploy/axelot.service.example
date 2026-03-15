@@ -1,0 +1,22 @@
+# Пример unit systemd для gunicorn.
+# Скопировать в /etc/systemd/system/axelot.service,
+# подставить WorkingDirectory и пути, затем:
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable axelot
+#   sudo systemctl start axelot
+
+[Unit]
+Description=Axelot Django site (gunicorn)
+After=network.target
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/axelot-site
+Environment="PATH=/var/www/axelot-site/venv/bin"
+Environment="DJANGO_SETTINGS_MODULE=config.settings.prod"
+ExecStart=/var/www/axelot-site/venv/bin/gunicorn --workers 3 --bind unix:/var/www/axelot-site/axelot.sock config.wsgi:application
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

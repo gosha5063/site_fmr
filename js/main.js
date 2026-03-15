@@ -49,11 +49,16 @@
         data: payload
       };
 
-      // отправляем данные на бэкенд (нужен /api/leads на сервере)
-      fetch('/api/leads', {
+      var headers = { 'Content-Type': 'application/json' };
+      var csrfEl = document.querySelector('meta[name="csrf-token"]');
+      if (csrfEl) headers['X-CSRFToken'] = csrfEl.getAttribute('content');
+
+      fetch('/api/leads/', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: headers,
         body: JSON.stringify(body)
+      }).then(function (r) {
+        if (!r.ok) return Promise.reject(new Error(r.statusText));
       }).catch(function () {
         // при ошибке сети просто продолжаем, чтобы не ломать UX
       });

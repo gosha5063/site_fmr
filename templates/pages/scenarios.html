@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% block title %}Сценарии применения беспилотной техники{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div class="container">
+    <div class="page-kicker">Сценарии применения</div>
+    <h1>Где выгодна беспилотная складская техника</h1>
+    <p>
+      Фокусируемся на конкретных операционных сценариях: перемещение палет, типовые маршруты,
+      внутрипроизводственная логистика и масштабирование на парк.
+    </p>
+  </div>
+</section>
+
+<section id="pallet-move">
+  <div class="container">
+    <div class="section-title-row">
+      <h2>Перемещение палет внутри склада</h2>
+    </div>
+    <div class="page-grid-2">
+      <div>
+        <p>
+          Классический сценарий для беспилотной техники — перемещение палет между приёмкой,
+          буферными зонами, стеллажами и отгрузкой.
+        </p>
+        <ul>
+          <li>маршруты «ворота — буфер — ворота»;</li>
+          <li>подвоз палет к зонам отбора;</li>
+          <li>цикличные рейсы между зонами.</li>
+        </ul>
+      </div>
+      <div class="card card-muted">
+        <h3>Ожидаемый эффект</h3>
+        <p class="focus-accent">снижение нагрузки на водителей;</p>
+        <p class="focus-accent">рост производительности смены;</p>
+        <p class="focus-accent">меньше простоев и холостых пробегов.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="routes">
+  <div class="container">
+    <div class="section-title-row">
+      <h2>Типовые маршруты</h2>
+    </div>
+    <div class="page-grid-2">
+      <div>
+        <p>
+          Беспилотная техника особенно эффективна на устойчивых, хорошо формализованных маршрутах,
+          где легко описать точки старта, финиша и правила движения.
+        </p>
+      </div>
+      <div class="card card-muted">
+        <h3>Примеры</h3>
+        <p class="focus-accent">маршруты между линиями и буферами;</p>
+        <p class="focus-accent">циклы по круговым трассам в цехе;</p>
+        <p class="focus-accent">перевозка между складскими корпусами.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="interzone">
+  <div class="container">
+    <div class="section-title-row">
+      <h2>Межзоновые перевозки</h2>
+    </div>
+    <div class="page-grid-2">
+      <div>
+        <p>
+          Перемещение между зонами склада или цехами — один из ключевых кандидатов на
+          автоматизацию, так как маршруты обычно длинные и повторяемые.
+        </p>
+      </div>
+      <div class="card card-muted">
+        <h3>Задачи</h3>
+        <p class="focus-accent">перевозка полуфабрикатов и сырья;</p>
+        <p class="focus-accent">логистика между «грязными» и «чистыми» зонами;</p>
+        <p class="focus-accent">работа на стыке склада и производства.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="intralogistics">
+  <div class="container">
+    <div class="section-title-row">
+      <h2>Внутрипроизводственная логистика</h2>
+    </div>
+    <div class="page-grid-2">
+      <div>
+        <p>
+          Внутрипроизводственная логистика часто страдает от нехватки водителей и
+          неритмичности. Беспилотная техника помогает выровнять потоки и снять
+          нагрузку с персонала.
+        </p>
+      </div>
+      <div class="card card-muted">
+        <h3>Примеры сценариев</h3>
+        <p class="focus-accent">подвоз сырья к линиям;</p>
+        <p class="focus-accent">вывоз готовой продукции в буферы;</p>
+        <p class="focus-accent">цикличные рейсы в пределах цеха.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="lead-section">
+  <div class="container">
+    <div class="lead-form-wrap">
+      <h2>Подобрать сценарий для вашего склада</h2>
+      <p>Оставьте заявку на расчёт или свяжитесь с нами — предложим сценарий и оценим эффект.</p>
+      <p><a href="{% url 'index' %}#request-calc" class="btn btn-primary">Получить расчёт под наш склад</a> <a href="{% url 'contacts' %}#lead-main" class="btn btn-ghost">Связаться с нами</a></p>
+    </div>
+  </div>
+</section>
+{% endblock %}

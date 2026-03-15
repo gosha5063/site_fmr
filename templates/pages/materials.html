@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}Материалы — беспилотная складская техника{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div class="container">
+    <div class="page-kicker">Материалы</div>
+    <h1>Презентации и материалы по беспилотной технике</h1>
+    <p>В этом разделе будут доступны презентации, описания решений и кейсы для скачивания.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-title-row">
+      <h2>Доступные материалы</h2>
+    </div>
+    <div class="item-grid">
+      <article class="item-card">
+        <h3>Общее решение по автоматизации техники</h3>
+        <p>Структура презентации для клиентов, которые только знакомятся с беспилотной техникой.</p>
+        <div class="item-card-meta">Формат: PDF</div>
+      </article>
+      <article class="item-card">
+        <h3>Сценарии применения на складе</h3>
+        <p>Материал с примерами маршрутов и оценкой эффектов.</p>
+        <div class="item-card-meta">Формат: PDF</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="lead-section">
+  <div class="container">
+    <div class="lead-form-wrap">
+      <h2>Получить материалы и расчёт</h2>
+      <p>Свяжитесь с нами — отправим презентации и подготовим расчёт под ваш склад.</p>
+      <p><a href="{% url 'contacts' %}#lead-main" class="btn btn-primary">Связаться с нами</a> <a href="{% url 'index' %}#request-calc" class="btn btn-ghost">Получить расчёт</a></p>
+    </div>
+  </div>
+</section>
+{% endblock %}
