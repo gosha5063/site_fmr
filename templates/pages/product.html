@@ -2,16 +2,9 @@
 {% load static %}
 {% block title %}Какая техника автоматизируется — беспилотные решения{% endblock %}
 {% block content %}
-<section class="page-hero page-hero--compact">
-  <div class="container">
-    <div class="page-kicker">Техника</div>
-    <h1>Какая техника автоматизируется</h1>
-    <p>
-      Дооснащаем вилочные погрузчики, ричтраки, штабелёры, паллетоперевозчики и технику заказчика
-      комплектом беспилотности. Старт с одной единицы, далее — масштабирование на парк.
-    </p>
-  </div>
-</section>
+
+
+{% include 'partials/pros-cons-table.html' %}
 
 <section id="customer-fleet">
   <div class="container">
@@ -22,20 +15,42 @@
       <div class="section-image section-image--left">
         <img src="{% static 'material/product/retrofit.png' %}" alt="Техника заказчика в демонстрационном зале">
       </div>
-      <div class="product-image-text-content">
+      <div class="card">
+        <div class="product-image-text-content product-image-text-content--structured">
         <p>
-          Мы можем дооснастить уже работающую технику при технической совместимости и
-          состоянии оборудования. Это снижает порог входа и позволяет начать без
-          закупки новой техники.
-          Мы постоянно увеличиваем модельный ряд известной нам техники.
+          <strong>Дооснащение готовой техники</strong>, позволяет вам
+          быстро попробовать роботизацию на вашем складе
+          без перестоения процессов.
         </p>
+        <p>
+          Мы должны оценить пригодность техники для управления с помощью нашего
+          бортового компьютера, а также состояние техники.<br>
+          Робот каждого производителя имеет свои особенности управления, поэтому
+          мы <strong>увеличиваем модельный ряд известной нам техники</strong>.
+        </p>
+        <div class="text-timeline">
+          <div class="text-timeline-item">
+            <span class="text-timeline-label">Исследование</span>
+            <span class="text-timeline-value">1–2 недели</span>
+          </div>
+          <div class="text-timeline-item">
+            <span class="text-timeline-label">Внедрение</span>
+            <span class="text-timeline-value">2–3 месяца</span>
+          </div>
+        </div>
+        <p>
+          <strong>
+            *Если ваша модель уже нам известна, 
+            время внедрения будет значительно меньше.</strong>
+        </p>
+        </div>
       </div>
     </div>
     <div class="card card-muted">
       <h3>Автоматизация парка</h3>
-      <p class="focus-accent">старт с 1–2 единиц техники;</p>
-      <p class="focus-accent">поэтапное подключение новых машин и маршрутов;</p>
-      <p class="focus-accent">масштабирование на несколько площадок.</p>
+      <p class="focus-accent">Пилотный старт с 1–2 единиц техники</p>
+      <p class="focus-accent">Быстрое масштабирование на 
+        несколько одинаковых машин.</p>
     </div>
   </div>
 </section>
@@ -43,30 +58,38 @@
 <section id="forklifts">
   <div class="container">
     <div class="section-title-row">
-      <h2>Вилочные погрузчики</h2>
+      <h2>Вилочные погрузчики FMR</h2>
     </div>
     <div class="product-image-text-row product-image-text-row--right">
       <div class="section-image section-image--left">
         <img src="{% static 'material/product/fmr.png' %}" alt="Беспилотные вилочные погрузчики и паллетоперевозчики">
       </div>
-      <div class="product-image-text-content">
+      <div class="card">
+        <div class="product-image-text-content">
         <p>
-          Беспилотные вилочные погрузчики подходят для перемещения палет в зонах приёмки,
-          отгрузки и буферного хранения. Основной эффект — повторяемость маршрутов и снижение
-          зависимости от водителей.
+          FMR-робот — это автономная мобильная
+           платформа с LiDAR и SLAM-навигацией
+            для перемещения грузов на складе и
+             производстве. Он самостоятельно строит маршрут,
+              объезжает препятствия, выполняет
+               межзоновые перевозки и работает
+                на высоте до 4 метров, помогая
+                 ускорить логистику без перестройки
+                  инфраструктуры, что делает его
+                  <strong>высокоэффективным решением</strong>
+                  для массовых повторяемых перемещений палет.
+
         </p>
-        <ul>
-          <li>типовые маршруты «рампа — буфер» и обратно;</li>
-          <li>работа в цикле с конвейерами и воротами;</li>
-          <li>перемещение палет между зонами склада.</li>
-        </ul>
+        <p class="product-metric-inline">25 паллет/час</p>
+        </div>
       </div>
     </div>
     <div class="card card-muted">
       <h3>Для каких задач</h3>
-      <p class="focus-accent">массовые повторяемые перемещения палет;</p>
-      <p class="focus-accent">снижение простоев техники;</p>
-      <p class="focus-accent">стабильная производительность смены.</p>
+      <p class="focus-accent">Массовые повторяемые перемещения паллет</p>
+      <p class="focus-accent">Загрузка и выгрузка паллет в зоне хранения</p>
+      <p class="focus-accent">Повышение точности отбора</p>
+      <p class="focus-accent">Межзоновые перевозки</p>
     </div>
   </div>
 </section>
@@ -80,43 +103,31 @@
       <div class="section-image section-image--left">
         <img src="{% static 'material/product/высотные ричтраки.png' %}" alt="Высотные ричтраки">
       </div>
-      <div class="product-image-text-content">
+      <div class="card">
+        <div class="product-image-text-content">
         <p>
-          Автоматизация ричтраков актуальна для стеллажных зон и работы на высоте, где
-          важно сочетание точности позиционирования и безопасности.
+          Беспилотные высотные ричтраки — 
+          это автоматизированные складские
+           машины для перемещения, подъёма
+            и <strong>размещения палет на большой высоте</strong>
+            до 6 метров без участия водителя.
+              Они используются для работы
+               в узких проходах и на высотных
+                стеллажах, самостоятельно
+                 выполняют транспортировку
+                  и штабелирование грузов,
+                   точно позиционируют палеты
+                    и помогают повысить плотность хранения,
+                     безопасность и производительность склада.
         </p>
+        </div>
       </div>
     </div>
     <div class="card card-muted">
-      <h3>Особенности дооснащения</h3>
-      <p class="focus-accent">учёт габаритов и динамики на высоте;</p>
-      <p class="focus-accent">настройка ограничений по коридорам и высоте подъёма;</p>
-      <p class="focus-accent">дополнительные сценарии безопасности.</p>
-    </div>
-  </div>
-</section>
-
-<section id="stackers">
-  <div class="container">
-    <div class="section-title-row">
-      <h2>Штабелёры</h2>
-    </div>
-    <div class="product-image-text-row product-image-text-row--right">
-      <div class="section-image section-image--left">
-        <img src="{% static 'material/product/штабелеры.png' %}" alt="Штабелёры">
-      </div>
-      <div class="product-image-text-content">
-        <p>
-          Штабелёры используются для работы в зонах отбора и локального хранения, где
-          особенно ценна автоматизация повторяющихся коротких маршрутов.
-        </p>
-      </div>
-    </div>
-    <div class="card card-muted">
-      <h3>Задачи автоматизации</h3>
-      <p class="focus-accent">обслуживание стеллажей в зоне отбора;</p>
-      <p class="focus-accent">циклические маршруты между буферами;</p>
-      <p class="focus-accent">подвоз / вывоз палет к зонам комплектации.</p>
+      <h3>Для каких задач</h3>
+      <p class="focus-accent">Работа в узких проходах и на высотных стеллажах</p>
+      <p class="focus-accent">Повышение плотности хранения</p>
+      <p class="focus-accent">Повышение безопасности работы</p>
     </div>
   </div>
 </section>
@@ -128,20 +139,26 @@
     </div>
     <div class="product-image-text-row">
       <div class="section-image section-image--left">
-        <img src="{% static 'material/product/agv.png' %}" alt="AGV тележки">
+        <img src="{% static 'material/product/avg тележки.png' %}" alt="AGV тележки">
       </div>
-      <div class="product-image-text-content">
+      <div class="card">
+        <div class="product-image-text-content">
         <p>
-          Паллетоперевозчики и AGV тележки — основной инструмент внутрипроизводственной логистики: подвоз
-          к линиям, перемещение между цехами, вывоз готовой продукции.
+          Связаться универсальные и популярные сегодня решения. 
+          Они самостоятельно строят карту склада, 
+          объезжают препятствия, подвозят товары к человеку или между зонами. 
+          Главное преимущество — гибкость: не нужно перестраивать пол, 
+          ставить магнитные ленты или менять стеллажи. Запустили — и работают.
+          <p class="product-metric-inline">15 паллет/час</p>
         </p>
+        </div>
       </div>
     </div>
     <div class="card card-muted">
       <h3>Где особенно эффективны</h3>
-      <p class="focus-accent">повторяемые участки маршрутов между зонами;</p>
-      <p class="focus-accent">круговые маршруты по цеху;</p>
-      <p class="focus-accent">обслуживание линий и конвейеров.</p>
+      <p class="focus-accent">Повторяемые участки маршрутов между зонами</p>
+      <p class="focus-accent">Круговые маршруты по цеху</p>
+      <p class="focus-accent">Обслуживание линий и конвейеров</p>
     </div>
   </div>
 </section>

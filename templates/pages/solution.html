@@ -72,70 +72,26 @@
       маршруту.
     </p>
     <div class="columns-3">
-      <div class="card">
+      <div class="card card--with-image">
         <h3>Контроллеры и управление</h3>
         <p>Управление приводами колес идет по станадартным протоколам, часто по CAN</p>
+        <img src="{% static 'material/solutions/computer.png' %}" alt="" class="card-deco-image" aria-hidden="true">
       </div>
-      <div class="card">
+      <div class="card card--with-image">
         <h3>Сенсоры и безопасность</h3>
         <p>Лидары, камеры и другие датчики контролируют зону вокруг техники и маршруты.</p>
+        <img src="{% static 'material/solutions/лидар.jpg' %}" alt="" class="card-deco-image" aria-hidden="true">
       </div>
-      <div class="card">
+      <div class="card card--with-image">
         <h3>Логика движения</h3>
         <p>Алгоритмы движения обеспечивают повторяемость и плавность, а также остановку при рисках.</p>
+        <img src="{% static 'material/solutions/mooving.png' %}" alt="" class="card-deco-image" aria-hidden="true">
       </div>
     </div>
   </div>
 </section>
 
-<section id="stages">
-  <div class="container">
-    <div class="section-title-row">
-      <h2>Этапы проекта</h2>
-    </div>
-    <div class="timeline-steps">
-      <div class="timeline-step">
-        <div class="timeline-marker">1</div>
-        <div class="timeline-content">
-          <h3>Расчёт</h3>
-          <p>
-            Выбранный интегратор анализирует ваш склад, фиксирует процессы и типы техники,
-            готовит расчёт по сценариям и экономике.
-          </p>
-        </div>
-      </div>
-      <div class="timeline-step">
-        <div class="timeline-marker">2</div>
-        <div class="timeline-content">
-          <h3>Подбор роботов</h3>
-          <p>
-            Определяем, какую технику дооснастить и где нужны новые роботы: ставим наши контроллеры
-            на вашу технику или технику партнёров.
-          </p>
-        </div>
-      </div>
-      <div class="timeline-step">
-        <div class="timeline-marker">3</div>
-        <div class="timeline-content">
-          <h3>Установка и настройка</h3>
-          <p>
-            Интегратор устанавливает систему управления флотом, заносит маршруты, подключает роботов
-            к WMS/RMS/WCS и настраивает безопасность.
-          </p>
-        </div>
-      </div>
-      <div class="timeline-step">
-        <div class="timeline-marker">4</div>
-        <div class="timeline-content">
-          <h3>Ввод в эксплуатацию</h3>
-          <p>
-            Решение переводится в рабочий режим, сопровождается и масштабируется на дополнительные участки.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+{% include 'partials/pros-cons-table.html' with section_id='stages' %}
 
 <section class="lead-section" id="lead-solution">
   <div class="container">
