@@ -27,6 +27,11 @@ body {
   flex-direction: column;
 }
 
+/* Увеличение размера текста во всех абзацах */
+p {
+  font-size: 1.1em !important;
+}
+
 body > main {
   flex: 1 0 auto;
 }
@@ -598,15 +603,15 @@ section {
 
 .audience-columns {
   max-width: none;
-  width: 100vw;
-  margin: 10px calc(50% - 50vw) 16px;
+  width: 100%;
+  margin: 10px 0 16px;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px 8px;
   align-items: start;
   background-color: rgba(255, 255, 255, 0.35); /* слегка голубой фон */
-  border-radius: 0;
-  padding: 0 56px;
+  border-radius: 12px;
+  padding: 0 10px;
 }
 
 .audience-list {
@@ -633,7 +638,7 @@ section {
   flex-direction: column;
   align-items: stretch;
   --audience-item-height: 68px;
-  gap: calc(var(--audience-item-height) + 8px); /* шаг между "точками" */
+  gap: calc(var(--audience-item-height) + 16px); /* шаг между "точками" */
 }
 
 .audience-list--col li {
@@ -695,6 +700,7 @@ section {
 
   .audience-list--col {
     --audience-item-height: 62px;
+    gap: calc(var(--audience-item-height) + 12px);
   }
 }
 
@@ -919,7 +925,7 @@ section {
 
 .section-title-meta {
   max-width: 480px;
-  font-size: 14px;
+  font-size: 15px;
   color: #666666;
 }
 
@@ -1441,7 +1447,7 @@ form[data-lead] {
 
 .item-card p {
   margin: 0 0 8px;
-  font-size: 14px;
+  font-size: 16px !important;
   color: #666666;
 }
 
@@ -1487,7 +1493,7 @@ form[data-lead] {
   border-collapse: collapse;
   border: 2px solid #1a1a1a;
   table-layout: fixed; /* фиксируем распределение ширины колонок */
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .pros-cons-single-table th,
@@ -1551,8 +1557,8 @@ form[data-lead] {
 }
 
 .pros-cons-single-table td li {
-  margin-bottom: 10px;
-  padding-left: 18px;
+  margin-bottom: 14px;
+  padding-left: 22px;
   position: relative;
 }
 
@@ -1573,7 +1579,7 @@ form[data-lead] {
 
 @media (max-width: 700px) {
   .pros-cons-single-table {
-    font-size: 13px;
+    font-size: 14px;
   }
   .pros-cons-single-table th,
   .pros-cons-single-table td {
