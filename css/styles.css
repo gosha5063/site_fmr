@@ -219,6 +219,13 @@ img {
   margin-right: 16px;
 }
 
+.header-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
 .header-contacts {
   display: flex;
   flex-direction: column;
@@ -302,18 +309,40 @@ img {
 @media (max-width: 960px) {
   .header-inner {
     padding: 12px 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px 0;
+    align-items: center;
+  }
+
+  .header-logo {
+    grid-row: 1;
+    justify-self: center;
+    margin-left: 0;
   }
 
   .header-nav-wrap {
     display: none;
   }
 
-  .menu-toggle {
-    display: inline-flex;
+  .header-right {
+    grid-row: 2;
+    width: 100%;
+    margin-right: 0;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
   }
 
-  .header-right {
+  .header-cta-group {
+    flex: 1;
+    justify-content: center;
     gap: 8px;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+    flex-shrink: 0;
   }
 
   .header-contacts {
@@ -1487,6 +1516,91 @@ form[data-lead] {
   margin-bottom: 12px;
 }
 
+.pros-cons-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Мобильная версия — карточки вместо таблицы (скрыта на ПК) */
+.pros-cons-mobile-stack {
+  display: none;
+}
+
+.pros-cons-mobile-card {
+  margin-top: 14px;
+  border: 2px solid #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.pros-cons-mobile-card:first-of-type {
+  margin-top: 16px;
+}
+
+.pros-cons-mobile-card__title {
+  margin: 0;
+  padding: 12px 14px;
+  font-size: clamp(15px, 4vw, 17px);
+  font-weight: 700;
+  line-height: 1.3;
+  color: #1a1a1a;
+  background: linear-gradient(135deg, #f8f9fa 0%, #eef0f3 100%);
+  border-bottom: 3px solid var(--ax-red, #c41e3a);
+}
+
+.pros-cons-mobile-card__body {
+  padding: 0;
+}
+
+.pros-cons-mobile-block {
+  padding: 12px 14px 14px;
+}
+
+.pros-cons-mobile-block--plus {
+  background: #fafafa;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.pros-cons-mobile-block--minus {
+  background: #fafafa;
+}
+
+.pros-cons-mobile-block__label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #555555;
+  margin-bottom: 8px;
+}
+
+.pros-cons-mobile-ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pros-cons-mobile-ul li {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  padding: 6px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #1a1a1a;
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 999px;
+  word-break: break-word;
+  hyphens: auto;
+}
+
 .pros-cons-single-table {
   width: 100%;
   margin-top: 16px;
@@ -1578,6 +1692,14 @@ form[data-lead] {
 }
 
 @media (max-width: 700px) {
+  .pros-cons-table-wrap--desktop {
+    display: none;
+  }
+
+  .pros-cons-mobile-stack {
+    display: block;
+  }
+
   .pros-cons-single-table {
     font-size: 14px;
   }

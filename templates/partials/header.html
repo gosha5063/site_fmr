@@ -44,8 +44,10 @@
     </div>
 
     <div class="header-right">
-      <a href="{% url 'contacts' %}#lead-main" class="btn btn-ghost header-cta-btn">Связаться</a>
-      <a href="{% url 'index' %}#request-calc" class="btn btn-primary header-cta-btn">Запросить расчёт</a>
+      <div class="header-cta-group">
+        <a href="{% url 'contacts' %}#lead-main" class="btn btn-ghost header-cta-btn">Связаться</a>
+        <a href="{% url 'index' %}#request-calc" class="btn btn-primary header-cta-btn">Запросить расчёт</a>
+      </div>
       <button class="menu-toggle" type="button" aria-label="Меню">☰</button>
     </div>
   </div>
