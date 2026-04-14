@@ -12,6 +12,12 @@ urlpatterns = [
     path('cases/pogruzchik-priemka/', views.page_view, {'page_name': 'case-pogruzchik-priemka'}, name='case-pogruzchik-priemka'),
     path('cases/park-tehniki/', views.page_view, {'page_name': 'case-park-tehniki'}, name='case-park-tehniki'),
     path('blog/', views.page_view, {'page_name': 'blog'}, name='blog'),
+    path(
+        'blog/wms-rms-rcs-zhelezo/',
+        views.page_view,
+        {'page_name': 'blog-wms-rms-pyramid'},
+        name='blog-wms-rms-pyramid',
+    ),
     path('demo/', views.page_view, {'page_name': 'demo'}, name='demo'),
     path('faq/', views.page_view, {'page_name': 'faq'}, name='faq'),
     path('partners/', views.page_view, {'page_name': 'partners'}, name='partners'),

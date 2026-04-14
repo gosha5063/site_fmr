@@ -11,6 +11,7 @@ PAGE_TEMPLATES = {
     'case-pogruzchik-priemka': 'pages/cases/case-pogruzchik-priemka.html',
     'case-park-tehniki': 'pages/cases/case-park-tehniki.html',
     'blog': 'pages/blog.html',
+    'blog-wms-rms-pyramid': 'pages/blog-wms-rms-pyramid.html',
     'demo': 'pages/demo.html',
     'faq': 'pages/faq.html',
     'partners': 'pages/partners.html',

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}WMS, RMS, RCS и железо: уровни управления на складе{% endblock %}
+{% block content %}
+<section class="page-hero page-hero--compact">
+  <div class="container">
+    <div class="page-kicker">Блог / Экспертиза</div>
+    <h1>WMS, RMS, RCS и железо: как устроены уровни управления</h1>
+    <p>
+      Коротко о том, какие системы стоят «выше» и «ниже» по отношению к роботу на складе
+      и за что отвечает каждый уровень.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="container container--narrow">
+    <p>
+      Сверху вниз горизонт планирования сужается, а детализация управления растёт:
+      от заказов и задач склада — к конкретному приводу на борту техники.
+    </p>
+  </div>
+
+  <div class="container wms-stack-diagram-outer">
+    {% include 'partials/wms-stack-pyramid.html' %}
+  </div>
+
+  <div class="container container--narrow">
+    <p>
+      На практике интеграторы и заказчик стыкуют WMS/RMS по стандартам вроде VDA5050,
+      а RCS и «железо» обычно поставляются в составе решения беспилотности.
+      Точные границы между продуктами у разных вендоров могут отличаться, но логика уровней сохраняется.
+    </p>
+
+    <p>
+      <a href="{% url 'blog' %}" class="btn btn-ghost">Все материалы блога</a>
+      <a href="{% url 'contacts' %}#lead-main" class="btn btn-primary">Обсудить интеграцию</a>
+    </p>
+  </div>
+</section>
+{% endblock %}

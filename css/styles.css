@@ -1709,6 +1709,34 @@ form[data-lead] {
   }
 }
 
+/* Схема WMS → RMS → RCS → PLC (блог): иллюстрация PNG */
+.wms-stack-diagram-outer {
+  margin-bottom: 8px;
+}
+
+.wms-stack-diagram {
+  margin: 24px 0 32px;
+  padding: 16px 12px;
+  width: 100%;
+  max-width: none;
+  border-radius: 8px;
+  background-color: #fbfbfb;
+  background-image: radial-gradient(circle, #d0d0d0 1px, transparent 1px);
+  background-size: 14px 14px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.wms-stack-diagram__img {
+  display: block;
+  width: 100%;
+  max-width: min(100%, 920px);
+  height: auto;
+  margin: 0 auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
 /* Подвал */
 footer.site-footer {
   border-top: 1px solid var(--ax-border);

@@ -1,19 +1,20 @@
 import os
 from pathlib import Path
 
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
+
 try:
     from dotenv import load_dotenv
-    load_dotenv()
+    load_dotenv(BASE_DIR / '.env')
 except ImportError:
     pass
-
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY', 'dev-secret-key-change-me')
 
 DEBUG = os.getenv('DEBUG', 'True').lower() in ('true', '1', 'yes')
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
+_hosts_raw = (os.getenv('ALLOWED_HOSTS') or 'localhost,127.0.0.1').strip()
+ALLOWED_HOSTS = [h.strip() for h in _hosts_raw.split(',') if h.strip()]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -78,11 +79,11 @@ TIME_ZONE = 'Europe/Moscow'
 USE_I18N = True
 USE_TZ = True
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = [BASE_DIR] if (BASE_DIR / 'css').exists() else [BASE_DIR / 'static']
 
-MEDIA_URL = 'media/'
+MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
