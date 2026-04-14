@@ -3,7 +3,8 @@ import os
 import sys
 
 if __name__ == '__main__':
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings.dev')
+    # Respect explicitly provided settings module (important for prod collectstatic/migrate).
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', os.getenv('DJANGO_SETTINGS_MODULE', 'config.settings.dev'))
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
