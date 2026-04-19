@@ -88,6 +88,26 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Уведомления о заявках с форм (см. apps.leads.mail)
+LEADS_NOTIFICATION_EMAIL = (os.getenv('LEADS_NOTIFICATION_EMAIL') or 'g.vlasov@axelot.ru').strip()
+DEFAULT_FROM_EMAIL = (os.getenv('DEFAULT_FROM_EMAIL') or 'noreply@axelot.ru').strip()
+
+EMAIL_HOST = (os.getenv('EMAIL_HOST') or '').strip() or None
+EMAIL_PORT = int(os.getenv('EMAIL_PORT', '587'))
+EMAIL_HOST_USER = (os.getenv('EMAIL_HOST_USER') or '').strip()
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', '') or ''
+EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS', 'true').lower() in ('true', '1', 'yes')
+EMAIL_USE_SSL = os.getenv('EMAIL_USE_SSL', 'false').lower() in ('true', '1', 'yes')
+EMAIL_TIMEOUT = int(os.getenv('EMAIL_TIMEOUT', '15'))
+
+if EMAIL_HOST:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+else:
+    EMAIL_BACKEND = os.getenv(
+        'EMAIL_BACKEND',
+        'django.core.mail.backends.console.EmailBackend',
+    )
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,

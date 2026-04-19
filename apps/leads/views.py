@@ -4,6 +4,7 @@ from django.http import JsonResponse
 from django.views.decorators.http import require_http_methods
 
 from .forms import validate_lead_data
+from .mail import notify_new_lead
 from .models import Lead
 
 logger = logging.getLogger(__name__)
@@ -38,5 +39,7 @@ def submit_lead(request):
     except Exception as e:
         logger.exception('Ошибка сохранения заявки: %s', e)
         return JsonResponse({'ok': False, 'error': 'save_failed'}, status=500)
+
+    notify_new_lead(lead)
 
     return JsonResponse({'ok': True})
